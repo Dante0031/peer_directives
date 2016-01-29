@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ourApp">
+<head>
+    <meta charset="UTF-8">
+    <title>peer directives</title>
+    <script src="assets/angular.min.js"></script>
+    <script src="assets/client/client.js"></script>
+</head>
+<body ng-controller="MainController">
+    <h1>Hell World</h1>
+
+    <div ng-repeat="joke in jokes">
+        <h2 ng-mouseover="joke = joke + dragons.question">{{joke}}</h2>
+    </div>
+
+<!--<img src="/views/dragon.jpg">-->
+
+
+    Click here for answer: <input type="checkbox" ng-model="checked" aria-label="Toggle ngHide"><br/>
+    <div>
+        <div class="check-element animate-show" ng-show="checked">
+            <img src="/views/dragon.jpg"> {{dragons.spyro}}
+        </div>
+    </div>
+    <div>
+        <div class="check-element animate-show" ng-hide="checked">
+            <span class="glyphicon glyphicon-thumbs-down"></span>
+        </div>
+    </div>
+</body>
+</html>
+
